@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://antoninho.github.io/Portfolio/",
+  "homepage": "https://anthonyfrancius.github.com/Portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

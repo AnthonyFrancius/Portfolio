@@ -1,24 +1,28 @@
-import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="App">
+      <header className="header">Anthony Francius</header>
+      <main className="main">
+        <div className="gauche">
+          <div className="ligne1">
+            <div className="accroche"></div>
+            <div className="photo">
+              <img />
+            </div>
+          </div>
+          <div className="ligne2">
+            <div className="contact"></div>
+            <div className="description"></div>
+          </div>
+        </div>
+        <div className="droite">
+          <div className="experience"></div>
+          <div className="reseaux"></div>
+        </div>
+      </main>
+    </div>
   );
 }
 
