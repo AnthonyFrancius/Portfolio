@@ -2,7 +2,7 @@ import "./App.css";
 import linkedin from "./assets/linkedin-logo-linkedin-icon-transparent-free-png.webp";
 import github from "./assets/png-transparent-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-banner-thumbnail.png";
 import moi from "../public/moi.jpeg";
-import site from "../public/Capture d’écran 2025-08-21 à 19.30.37.png";
+import site from "../public/capture.png";
 
 function App() {
   return (

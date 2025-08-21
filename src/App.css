@@ -15,7 +15,7 @@ body {
 #root {
   max-width: 2000px;
   margin: 0 auto;
-  height: 100%;
+  height: 100vh;
 }
 
 .App {
@@ -68,6 +68,10 @@ body {
           flex: 0.6;
           background-color: darkorange;
           border-radius: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
 
           img {
             height: 100%;
@@ -87,7 +91,6 @@ body {
           background-color: gold;
           border-radius: 15px;
           display: flex;
-          flex-direction: row;
           justify-content: flex-start;
           align-items: flex-end;
           padding-left: 0.5rem;
@@ -98,7 +101,6 @@ body {
           background-color: hotpink;
           border-radius: 15px;
           display: flex;
-          flex-direction: row;
           justify-content: flex-start;
           align-items: flex-end;
           padding-left: 0.5rem;
@@ -132,6 +134,7 @@ body {
 
           h4 {
             flex: 1;
+            margin: 0;
           }
 
           .clim {
@@ -188,7 +191,6 @@ body {
         background-color: bisque;
         border-radius: 15px;
         display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
 
