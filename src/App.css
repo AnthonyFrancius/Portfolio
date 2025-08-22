@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;600;700&display=swap");
 * {
   box-sizing: border-box;
 }
-
 html,
 body {
   margin: 0;
@@ -10,6 +10,9 @@ body {
   width: 100vw;
   background-color: black;
   overflow: hidden;
+  body {
+    font-family: "Josefin Sans", sans-serif;
+  }
 }
 
 #root {
@@ -35,6 +38,7 @@ body {
     align-items: center;
     border-radius: 15px;
     overflow: hidden;
+    font-size: 1.7rem;
   }
 
   .main {
@@ -62,6 +66,9 @@ body {
           justify-content: flex-start;
           align-items: flex-end;
           padding-left: 0.5rem;
+          position: relative;
+          font-size: 1rem;
+          padding-left: 1rem;
         }
 
         .photo {
@@ -94,6 +101,18 @@ body {
           justify-content: flex-start;
           align-items: flex-end;
           padding-left: 0.5rem;
+          position: relative;
+          font-size: 1.2rem;
+          padding-left: 1rem;
+
+          button {
+            background-color: gold;
+            border: none;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2.3rem;
+          }
         }
 
         .description {
@@ -104,6 +123,19 @@ body {
           justify-content: flex-start;
           align-items: flex-end;
           padding-left: 0.5rem;
+          position: relative;
+          font-size: 1.2rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+
+          button {
+            background-color: hotpink;
+            border: none;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2.3rem;
+          }
         }
       }
     }
@@ -121,45 +153,45 @@ body {
         display: flex;
         flex-direction: column;
         gap: 0.2rem;
+        font-size: 1.2rem;
 
         .projet {
-          flex: 2;
+          flex: 1;
           background-color: red;
           border-radius: 15px 15px 0 0;
           display: flex;
-          flex-direction: row;
           justify-content: flex-start;
           align-items: flex-end;
-          padding-left: 0.5rem;
+          padding-left: 1.5rem;
+          position: relative;
 
-          h4 {
-            flex: 1;
-            margin: 0;
-          }
-
-          .clim {
-            flex: 4;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            img {
-              height: 90%;
-              width: 70%;
-              object-fit: cover;
-              border-radius: 15px;
-              background-color: black;
-            }
+          button {
+            background-color: red;
+            border: none;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2.3rem;
           }
         }
+
         .savoir {
           flex: 1;
           background-color: yellow;
           display: flex;
           justify-content: flex-start;
           align-items: flex-end;
-          padding-left: 0.5rem;
+          padding-left: 1.5rem;
+          position: relative;
+
+          button {
+            background-color: yellow;
+            border: none;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2.3rem;
+          }
         }
         .etude {
           flex: 1;
@@ -167,7 +199,17 @@ body {
           display: flex;
           justify-content: flex-start;
           align-items: flex-end;
-          padding-left: 0.5rem;
+          padding-left: 1.5rem;
+          position: relative;
+
+          button {
+            background-color: green;
+            border: none;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2.3rem;
+          }
         }
         .exp {
           flex: 1;
@@ -176,7 +218,17 @@ body {
           display: flex;
           justify-content: flex-start;
           align-items: flex-end;
-          padding-left: 0.5rem;
+          padding-left: 1.5rem;
+          position: relative;
+
+          button {
+            background-color: blueviolet;
+            border: none;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2.3rem;
+          }
         }
 
         .trait {

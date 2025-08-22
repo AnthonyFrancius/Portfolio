@@ -1,8 +1,8 @@
 import "./App.css";
+import { FiArrowUpRight } from "react-icons/fi";
 import linkedin from "./assets/linkedin-logo-linkedin-icon-transparent-free-png.webp";
 import github from "./assets/png-transparent-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-banner-thumbnail.png";
 import moi from "../public/moi.jpeg";
-import site from "../public/capture.png";
 
 function App() {
   return (
@@ -23,12 +23,18 @@ function App() {
           </div>
           <div className="ligne2">
             <div className="contact">
+              <button>
+                <FiArrowUpRight />
+              </button>
               <h2>Contactez-moi</h2>
             </div>
             <div className="description">
+              <button>
+                <FiArrowUpRight />
+              </button>
               <p>
-                Développeur web avec une passion brûlante pour le front-end et
-                une envie constante d'apprendre. <br /> Chaque projet est une
+                Développeur web avec une passion grandissante pour le front-end
+                et une envie constante d'apprendre. <br /> Chaque projet est une
                 nouvelle mission
               </p>
             </div>
@@ -37,21 +43,30 @@ function App() {
         <div className="droite">
           <div className="experience">
             <div className="projet">
+              <button>
+                <FiArrowUpRight />
+              </button>
               <h4>Projet</h4>
-              <div className="clim">
-                <img src={site} alt="miniature du site internet clim a serv" />
-              </div>
             </div>
             <div className="trait" />
             <div className="savoir">
+              <button>
+                <FiArrowUpRight />
+              </button>
               <h4>savoir faire</h4>
             </div>
             <div className="trait" />
             <div className="etude">
+              <button>
+                <FiArrowUpRight />
+              </button>
               <h4>Etudes</h4>
             </div>
             <div className="trait" />
             <div className="exp">
+              <button>
+                <FiArrowUpRight />
+              </button>
               <h4>Expériences</h4>
             </div>
           </div>
