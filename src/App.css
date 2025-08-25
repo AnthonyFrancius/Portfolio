@@ -8,7 +8,6 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background-color: black;
   overflow: hidden;
   body {
     font-family: "Josefin Sans", sans-serif;
@@ -28,17 +27,18 @@ body {
   flex-direction: column;
   padding: 1rem;
   gap: 1rem;
-  background-color: black;
+  background-color: #5b7768;
 
   .header {
     flex: 1;
-    background-color: white;
+    background-color: #dae3d7;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
     overflow: hidden;
     font-size: 1.7rem;
+    color: #1f2a24;
   }
 
   .main {
@@ -59,16 +59,16 @@ body {
 
         .accroche {
           flex: 2;
-          background-color: darkslategrey;
+          background-color: #1f2a24;
           border-radius: 15px;
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
           align-items: flex-end;
           padding-left: 0.5rem;
-          position: relative;
           font-size: 1rem;
           padding-left: 1rem;
+          color: #dae3d7;
         }
 
         .photo {
@@ -95,7 +95,7 @@ body {
 
         .contact {
           flex: 1;
-          background-color: gold;
+          background-color: #dae3d7;
           border-radius: 15px;
           display: flex;
           justify-content: flex-start;
@@ -104,20 +104,26 @@ body {
           position: relative;
           font-size: 1.2rem;
           padding-left: 1rem;
+          color: #1f2a24;
 
           button {
-            background-color: gold;
+            background-color: #dae3d7;
             border: none;
             position: absolute;
             top: 1rem;
             right: 1rem;
             font-size: 2.3rem;
+            color: #5b7768;
+            cursor: pointer;
+            a {
+              color: inherit;
+            }
           }
         }
 
         .description {
           flex: 2;
-          background-color: hotpink;
+          background-color: #1f2a24;
           border-radius: 15px;
           display: flex;
           justify-content: flex-start;
@@ -127,14 +133,17 @@ body {
           font-size: 1.2rem;
           padding-left: 1rem;
           padding-right: 1rem;
+          color: #dae3d7;
 
           button {
-            background-color: hotpink;
+            background-color: #1f2a24;
             border: none;
             position: absolute;
             top: 1rem;
             right: 1rem;
             font-size: 2.3rem;
+            color: #dae3d7;
+            cursor: pointer;
           }
         }
       }
@@ -148,16 +157,16 @@ body {
 
       .experience {
         flex: 4;
-        background-color: azure;
+        background-color: #1f2a24;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
         gap: 0.2rem;
         font-size: 1.2rem;
+        color: #dae3d7;
 
         .projet {
           flex: 1;
-          background-color: red;
           border-radius: 15px 15px 0 0;
           display: flex;
           justify-content: flex-start;
@@ -166,18 +175,19 @@ body {
           position: relative;
 
           button {
-            background-color: red;
+            background-color: #1f2a24;
             border: none;
             position: absolute;
             top: 1rem;
             right: 1rem;
             font-size: 2.3rem;
+            color: #dae3d7;
+            cursor: pointer;
           }
         }
 
         .savoir {
           flex: 1;
-          background-color: yellow;
           display: flex;
           justify-content: flex-start;
           align-items: flex-end;
@@ -185,17 +195,18 @@ body {
           position: relative;
 
           button {
-            background-color: yellow;
+            background-color: #1f2a24;
             border: none;
             position: absolute;
             top: 1rem;
             right: 1rem;
             font-size: 2.3rem;
+            color: #dae3d7;
+            cursor: pointer;
           }
         }
-        .etude {
+        .diplome {
           flex: 1;
-          background-color: green;
           display: flex;
           justify-content: flex-start;
           align-items: flex-end;
@@ -203,17 +214,18 @@ body {
           position: relative;
 
           button {
-            background-color: green;
+            background-color: #1f2a24;
             border: none;
             position: absolute;
             top: 1rem;
             right: 1rem;
             font-size: 2.3rem;
+            color: #dae3d7;
+            cursor: pointer;
           }
         }
         .exp {
           flex: 1;
-          background-color: blueviolet;
           border-radius: 0 0 15px 15px;
           display: flex;
           justify-content: flex-start;
@@ -222,25 +234,64 @@ body {
           position: relative;
 
           button {
-            background-color: blueviolet;
+            background-color: #1f2a24;
             border: none;
             position: absolute;
             top: 1rem;
             right: 1rem;
             font-size: 2.3rem;
+            color: #dae3d7;
+            cursor: pointer;
           }
         }
 
         .trait {
           width: 60%;
           margin: 0 auto;
-          border: solid 0.5px grey;
+          border: solid 0.5px #dae3d7;
+        }
+
+        .modal {
+          width: 100vw;
+          height: 100vh;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          position: fixed;
+          z-index: 1;
+          .overlay {
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(149, 149, 149, 0.3);
+            backdrop-filter: blur(10px);
+          }
+          .contenu {
+            display: flex;
+            height: 80vh;
+            width: 80vw;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            overflow-y: scroll;
+            background-color: #1f2a24;
+            color: #dae3d7;
+            scrollbar-width: none;
+            border-radius: 15px;
+          }
         }
       }
 
       .reseaux {
         flex: 0.5;
-        background-color: bisque;
+        background-color: #dae3d7;
         border-radius: 15px;
         display: flex;
         align-items: center;
