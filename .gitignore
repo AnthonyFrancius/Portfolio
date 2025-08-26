@@ -13,6 +13,17 @@ dist-ssr
 *.local
 public
 
+vite-env.d.ts
+eslint.config.js
+package.json
+package-lock.json
+.gitignore
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+vite.svg
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

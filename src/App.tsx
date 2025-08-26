@@ -1,11 +1,19 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import linkedin from "./assets/linkedin-logo-linkedin-icon-transparent-free-png.webp";
 import github from "./assets/png-transparent-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-banner-thumbnail.png";
 import moi from "../public/moi.jpeg";
 
 function App() {
+  // Animation du chargement à l'ouverture du site
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Modals parti de droite
   const [projet, setProjet] = useState(false);
   const toggleProjet = () => {
     setProjet(!projet);
@@ -23,7 +31,11 @@ function App() {
     setExp(!exp);
   };
 
-  return (
+  return loading ? (
+    <div className="loader">
+      <h1>Bonjour</h1>
+    </div>
+  ) : (
     <div className="App">
       <header className="header">Anthony Francius</header>
       <main className="main">
@@ -50,12 +62,12 @@ function App() {
             </div>
             <div className="description">
               <button>
-                <FiArrowUpRight />
+                <FiArrowUpRight />{" "}
               </button>
               <p>
                 Développeur web avec une passion grandissante pour le front-end
-                et une envie constante d'apprendre. <br /> Chaque projet est une
-                nouvelle mission
+                et une envie constante d'apprendre.
+                <br /> Chaque projet est une nouvelle mission.
               </p>
             </div>
           </div>
@@ -66,9 +78,8 @@ function App() {
               <button onClick={toggleProjet}>
                 {projet && (
                   <div className="modal">
-                    <div className="overlay">
-                      <div className="contenu">vive les chamois</div>
-                    </div>
+                    <div className="overlay" />
+                    <div className="contenu">vive les chamois</div>
                   </div>
                 )}
                 <FiArrowUpRight />
@@ -80,8 +91,25 @@ function App() {
               <button onClick={toggleSavoir}>
                 {savoir && (
                   <div className="modal">
-                    <div className="overlay">
-                      <div className="contenu">aller l'om</div>
+                    <div className="overlay" />
+                    <div className="contenu">
+                      <h1> Savoir faire</h1>
+                      <h3>Developpement</h3>
+                      <p>HTML</p>
+                      <p>CSS</p>
+                      <p>SCSS</p>
+                      <p>JavaScript</p>
+                      <p>TypeScript</p>
+                      <p>React.js</p>
+                      <p>Next.js</p>
+                      <p>Git/Github</p>
+                      <p>Vite</p>
+                      <h3>Design</h3>
+                      <p>Figma</p>
+                      <p>Web Design</p>
+                      <h3>Autres</h3>
+                      <p>Canva</p>
+                      <p>Photoroom</p>
                     </div>
                   </div>
                 )}
@@ -98,7 +126,7 @@ function App() {
                     <div className="contenu">
                       <h1>Diplômes</h1>
                       <h3>O'Clock</h3>
-                      <h4>En distenciel</h4>
+                      <h4>En distanciel</h4>
                       <p>Développeur web fullstack</p>
                       <p>2024</p>
                       <h3>Lycée St André</h3>
@@ -121,9 +149,8 @@ function App() {
               <button onClick={toggleExp}>
                 {exp && (
                   <div className="modal">
-                    <div className="overlay">
-                      <div className="contenu">nul psg</div>
-                    </div>
+                    <div className="overlay" />
+                    <div className="contenu">nul psg</div>
                   </div>
                 )}
                 <FiArrowUpRight />
