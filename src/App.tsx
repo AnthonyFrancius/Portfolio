@@ -6,10 +6,10 @@ import github from "./assets/png-transparent-github-social-media-computer-icons-
 import moi from "../public/moi.jpeg";
 
 function App() {
-  // Animation du chargement à l'ouverture du site
+  // Animation à l'ouverture du site
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000);
+    const timer = setTimeout(() => setLoading(false), 5000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -33,7 +33,9 @@ function App() {
 
   return loading ? (
     <div className="loader">
-      <h1>Bonjour</h1>
+      <div className="anim">
+        <span />
+      </div>
     </div>
   ) : (
     <div className="App">
@@ -87,6 +89,33 @@ function App() {
               <h4>Projet</h4>
             </div>
             <div className="trait" />
+            <div className="diplome">
+              <button onClick={toggleDiplome}>
+                {diplome && (
+                  <div className="modal">
+                    <div className="overlay" />
+                    <div className="contenu">
+                      <h1>Diplômes</h1>
+                      <h3>O'Clock</h3>
+                      <h4>En distanciel</h4>
+                      <p>Développeur web fullstack</p>
+                      <p>2024</p>
+                      <h3>Lycée St André</h3>
+                      <h4>Niort</h4>
+                      <p>Baccalauréal Négosiation et suivi de la clientèle</p>
+                      <p>2010</p>
+                      <h3>Lycée St André</h3>
+                      <h4>Niort</h4>
+                      <p>Brevet d'Etudes Professionnel comptabilité</p>
+                      <p>2008</p>
+                    </div>
+                  </div>
+                )}
+                <FiArrowUpRight />
+              </button>
+              <h4>Diplômes</h4>
+            </div>
+            <div className="trait" />
             <div className="savoir">
               <button onClick={toggleSavoir}>
                 {savoir && (
@@ -118,33 +147,7 @@ function App() {
               <h4>Savoir faire</h4>
             </div>
             <div className="trait" />
-            <div className="diplome">
-              <button onClick={toggleDiplome}>
-                {diplome && (
-                  <div className="modal">
-                    <div className="overlay" />
-                    <div className="contenu">
-                      <h1>Diplômes</h1>
-                      <h3>O'Clock</h3>
-                      <h4>En distanciel</h4>
-                      <p>Développeur web fullstack</p>
-                      <p>2024</p>
-                      <h3>Lycée St André</h3>
-                      <h4>Niort</h4>
-                      <p>Baccalauréal Négosiation et suivi de la clientèle</p>
-                      <p>2010</p>
-                      <h3>Lycée St André</h3>
-                      <h4>Niort</h4>
-                      <p>Brevet d'Etudes Professionnel comptabilité</p>
-                      <p>2008</p>
-                    </div>
-                  </div>
-                )}
-                <FiArrowUpRight />
-              </button>
-              <h4>Diplômes</h4>
-            </div>
-            <div className="trait" />
+            {/* Expériences remplacer par Savoir etre */}
             <div className="exp">
               <button onClick={toggleExp}>
                 {exp && (
@@ -155,7 +158,7 @@ function App() {
                 )}
                 <FiArrowUpRight />
               </button>
-              <h4>Expériences</h4>
+              <h4>Savoir être</h4>
             </div>
           </div>
           <div className="reseaux">

@@ -10,6 +10,7 @@ body {
   width: 100vw;
   overflow: hidden;
   font-family: "Josefin Sans", sans-serif;
+  background-color: #5b7768;
 }
 
 #root {
@@ -21,11 +22,48 @@ body {
 
 .loader {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #5b7768;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  .anim {
+    height: 7em;
+  }
+  .anim span {
+    position: relative;
+    font-size: 7em;
+    text-align: center;
+    color: #dae3d7;
+  }
+  .anim span::before {
+    content: "";
+    animation: presentation 5s infinite;
+  }
+}
+
+@keyframes presentation {
+  0%,
+  20% {
+    content: "";
+  }
+  21%,
+  40% {
+    content: "Anthony Francius";
+  }
+  45%,
+  65% {
+    content: "Developpeur";
+  }
+  70%,
+  90% {
+    content: "Front End";
+  }
+  91%,
+  100% {
+    content: "";
+  }
 }
 
 .App {
@@ -36,6 +74,8 @@ body {
   padding: 1rem;
   gap: 1rem;
   background-color: #5b7768;
+  transform: rotate(2deg);
+  animation: redresser 0.5s ease-in-out forwards;
 
   .header {
     flex: 1;
@@ -87,6 +127,9 @@ body {
           justify-content: center;
           align-items: center;
           overflow: hidden;
+          transform: translate(-4vw, 8vh) scale(1.3);
+          animation: ajustement 0.7s ease-in-out 1s forwards;
+          z-index: 1;
 
           img {
             height: 100%;
@@ -313,5 +356,20 @@ body {
         }
       }
     }
+  }
+}
+
+@keyframes redresser {
+  from {
+    transform: rotate(2deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes ajustement {
+  to {
+    transform: translate(0, 0) scale(1);
   }
 }
