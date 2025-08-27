@@ -97,17 +97,21 @@ function App() {
                     <div className="contenu">
                       <h1>Diplômes</h1>
                       <h3>O'Clock</h3>
-                      <h4>En distanciel</h4>
+                      <h4>2024</h4>
                       <p>Développeur web fullstack</p>
-                      <p>2024</p>
+                      <p>En distanciel</p>
+                      <p />
                       <h3>Lycée St André</h3>
-                      <h4>Niort</h4>
+                      <h4>2010</h4>
                       <p>Baccalauréal Négosiation et suivi de la clientèle</p>
-                      <p>2010</p>
+                      <p>Niort</p>
+                      <p />
                       <h3>Lycée St André</h3>
-                      <h4>Niort</h4>
+                      <h4>2008</h4>
                       <p>Brevet d'Etudes Professionnel comptabilité</p>
-                      <p>2008</p>
+                      <p>Niort</p>
+                      <p />
+                      <p />
                     </div>
                   </div>
                 )}
@@ -124,6 +128,7 @@ function App() {
                     <div className="contenu">
                       <h1> Savoir faire</h1>
                       <h3>Developpement</h3>
+                      <p />
                       <p>HTML</p>
                       <p>CSS</p>
                       <p>SCSS</p>
@@ -134,11 +139,15 @@ function App() {
                       <p>Git/Github</p>
                       <p>Vite</p>
                       <h3>Design</h3>
+                      <p />
                       <p>Figma</p>
                       <p>Web Design</p>
                       <h3>Autres</h3>
+                      <p />
                       <p>Canva</p>
                       <p>Photoroom</p>
+                      <p />
+                      <p />
                     </div>
                   </div>
                 )}
@@ -153,7 +162,16 @@ function App() {
                 {exp && (
                   <div className="modal">
                     <div className="overlay" />
-                    <div className="contenu">nul psg</div>
+                    <div className="contenu">
+                      <h1>Savoir être</h1>
+                      <p />
+                      <p>Motivé</p>
+                      <p>Organisé</p>
+                      <p>Autonome</p>
+                      <p>Coopératif</p>
+                      <p />
+                      <p />
+                    </div>
                   </div>
                 )}
                 <FiArrowUpRight />
