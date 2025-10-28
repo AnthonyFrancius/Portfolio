@@ -4,6 +4,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import linkedin from "./assets/linkedin-logo-linkedin-icon-transparent-free-png.webp";
 import github from "./assets/png-transparent-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-banner-thumbnail.png";
 import moi from "../public/moi.jpeg";
+import climaserv from "../public/climaserv.png";
 
 function App() {
   // Animation à l'ouverture du site
@@ -46,7 +47,7 @@ function App() {
             <div className="accroche">
               <h1>
                 Mon terrain de jeu ? <br />
-                Architecture front-end et logique métier
+                Architecture web et logique métier
               </h1>
             </div>
             <div className="photo">
@@ -64,7 +65,7 @@ function App() {
             </div>
             <div className="description">
               <button>
-                <FiArrowUpRight />{" "}
+                <FiArrowUpRight />
               </button>
               <p>
                 Développeur web avec une passion grandissante pour le front-end
@@ -76,17 +77,70 @@ function App() {
         </div>
         <div className="droite">
           <div className="experience">
-            <div className="projet">
+            <div className="projets">
               <button onClick={toggleProjet}>
                 {projet && (
                   <div className="modal">
                     <div className="overlay" />
-                    <div className="contenu">vive les chamois</div>
+                    <div className="contenu">
+                      <h1> Projets</h1>
+                      <div className="projet">
+                        <a
+                          href="https://laclim.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            className="clim"
+                            src={climaserv}
+                            alt="image page d'accueil du site clim a serv"
+                          />
+                        </a>
+                        <div>
+                          <h4> Clim @ Serv'</h4>
+                          <p>description du projet</p>
+                        </div>
+                      </div>
+                      <div className="projet">
+                        <a
+                          href="https://laclim.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            className="clim"
+                            src={climaserv}
+                            alt="image page d'accueil du site clim a serv"
+                          />
+                        </a>
+                        <div>
+                          <h4> Clim @ Serv'</h4>
+                          <p>description du projet</p>
+                        </div>
+                      </div>
+                      <div className="projet">
+                        <a
+                          href="https://laclim.vercel.app/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            className="clim"
+                            src={climaserv}
+                            alt="image page d'accueil du site clim a serv"
+                          />
+                        </a>
+                        <div>
+                          <h4> Clim @ Serv'</h4>
+                          <p>description du projet</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 )}
                 <FiArrowUpRight />
               </button>
-              <h4>Projet</h4>
+              <h4>Projets</h4>
             </div>
             <div className="trait" />
             <div className="diplome">
@@ -127,26 +181,29 @@ function App() {
                     <div className="overlay" />
                     <div className="contenu">
                       <h1> Savoir faire</h1>
-                      <h3>Developpement</h3>
+                      <h3>Font-End</h3>
                       <p />
-                      <p>HTML</p>
-                      <p>CSS</p>
-                      <p>SCSS</p>
-                      <p>JavaScript</p>
-                      <p>TypeScript</p>
                       <p>React.js</p>
                       <p>Next.js</p>
-                      <p>Git/Github</p>
+                      <p>JavaScript</p>
+                      <p>TypeScript</p>
                       <p>Vite</p>
-                      <h3>Design</h3>
+                      <h3>Back-End</h3>
+                      <p />
+                      <p>Node js</p>
+                      <p>Firebase</p>
+                      <p>PosgreSQL</p>
+                      <h3>Design et céation visuel</h3>
                       <p />
                       <p>Figma</p>
-                      <p>Web Design</p>
+                      <p>Photoroom</p>
+                      <p>Canva</p>
+                      <p>Blender</p>
                       <h3>Autres</h3>
                       <p />
-                      <p>Canva</p>
-                      <p>Photoroom</p>
-                      <p />
+                      <p>Git/Github</p>
+                      <p>Vercel</p>
+                      <p>Vs Code</p>
                       <p />
                     </div>
                   </div>
@@ -182,7 +239,9 @@ function App() {
           <div className="reseaux">
             <a
               href="https://linkedin.com/in/anthony-francius-7869311ab"
+              // pour que ca ouvre une autre page
               target="_blank"
+              // pour des raison de sécurité et confidencialité
               rel="noopener noreferrer"
             >
               <img src={linkedin} alt="logo linkedin" />
@@ -192,7 +251,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={github} alt=" logo github" />
+              <img src={github} alt=" logo github" className="github" />
             </a>
           </div>
         </div>

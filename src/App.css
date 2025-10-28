@@ -54,11 +54,11 @@ body {
   }
   45%,
   65% {
-    content: "Développeur";
+    content: "Développeur Web";
   }
   70%,
   90% {
-    content: "Front End";
+    content: "Niort";
   }
   91%,
   100% {
@@ -216,7 +216,7 @@ body {
         font-size: 1.2rem;
         color: #dae3d7;
 
-        .projet {
+        .projets {
           flex: 1;
           border-radius: 15px 15px 0 0;
           display: flex;
@@ -234,6 +234,20 @@ body {
             font-size: 2.3rem;
             color: #dae3d7;
             cursor: pointer;
+          }
+
+          .projet {
+            display: flex;
+            flex-direction: row;
+
+            .clim {
+              width: 15vw;
+              height: auto;
+            }
+            h4 {
+              text-align: center;
+              justify-content: center;
+            }
           }
         }
 
@@ -368,6 +382,10 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        .github {
+          border-radius: 50px;
+        }
 
         img {
           width: 3vw;
