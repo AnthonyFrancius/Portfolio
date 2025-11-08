@@ -9,7 +9,7 @@ const taff = [
     key: "1",
     href: "https://laclim.vercel.app/",
     className: "clim",
-    src: "public/climaserv.png",
+    src: "climaserv.png",
     alt: "image page d'accueil du site clim a serv",
     nom: "Clim @ Serv'",
     description:
@@ -62,7 +62,7 @@ function App() {
               </h1>
             </div>
             <div className="photo">
-              <img src="public/moi.jpeg" />
+              <img src="moi.jpeg" />
             </div>
           </div>
           <div className="ligne2">
