@@ -3,8 +3,19 @@ import { useEffect, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import linkedin from "./assets/linkedin-logo-linkedin-icon-transparent-free-png.webp";
 import github from "./assets/png-transparent-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-banner-thumbnail.png";
-import moi from "../public/moi.jpeg";
-import climaserv from "../public/climaserv.png";
+
+const taff = [
+  {
+    key: "1",
+    href: "https://laclim.vercel.app/",
+    className: "clim",
+    src: "public/climaserv.png",
+    alt: "image page d'accueil du site clim a serv",
+    nom: "Clim @ Serv'",
+    description:
+      "Site internet pour une entreprise de climatisation et pompe à chaleur",
+  },
+];
 
 function App() {
   // Animation à l'ouverture du site
@@ -51,7 +62,7 @@ function App() {
               </h1>
             </div>
             <div className="photo">
-              <img src={moi} />
+              <img src="public/moi.jpeg" />
             </div>
           </div>
           <div className="ligne2">
@@ -84,57 +95,27 @@ function App() {
                     <div className="overlay" />
                     <div className="contenu">
                       <h1> Projets</h1>
-                      <div className="projet">
-                        <a
-                          href="https://laclim.vercel.app/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            className="clim"
-                            src={climaserv}
-                            alt="image page d'accueil du site clim a serv"
-                          />
-                        </a>
-                        <div>
-                          <h4> Clim @ Serv'</h4>
-                          <p>description du projet</p>
+                      {taff.map((i) => (
+                        <div className="projet">
+                          <a
+                            key={i.key}
+                            href={i.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img
+                              className={i.className}
+                              src={i.src}
+                              alt={i.alt}
+                            />
+                          </a>
+
+                          <div key={i.key}>
+                            <h4>{i.nom}</h4>
+                            <p>{i.description}</p>
+                          </div>
                         </div>
-                      </div>
-                      <div className="projet">
-                        <a
-                          href="https://laclim.vercel.app/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            className="clim"
-                            src={climaserv}
-                            alt="image page d'accueil du site clim a serv"
-                          />
-                        </a>
-                        <div>
-                          <h4> Clim @ Serv'</h4>
-                          <p>description du projet</p>
-                        </div>
-                      </div>
-                      <div className="projet">
-                        <a
-                          href="https://laclim.vercel.app/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            className="clim"
-                            src={climaserv}
-                            alt="image page d'accueil du site clim a serv"
-                          />
-                        </a>
-                        <div>
-                          <h4> Clim @ Serv'</h4>
-                          <p>description du projet</p>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 )}
