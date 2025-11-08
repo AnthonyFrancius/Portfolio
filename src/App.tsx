@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import linkedin from "./assets/linkedin-logo-linkedin-icon-transparent-free-png.webp";
 import github from "./assets/png-transparent-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-banner-thumbnail.png";
-import moi from "../public/moi.jpeg";
-import clim from "../public/climaserv.png";
+import moi from "./assets/moi.jpeg";
+import clim from "./assets/climaserv.png";
 
 const taff = [
   {
