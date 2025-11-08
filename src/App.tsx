@@ -3,13 +3,15 @@ import { useEffect, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import linkedin from "./assets/linkedin-logo-linkedin-icon-transparent-free-png.webp";
 import github from "./assets/png-transparent-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-banner-thumbnail.png";
+import moi from "../public/moi.jpeg";
+import clim from "../public/climaserv.png";
 
 const taff = [
   {
     key: "1",
     href: "https://laclim.vercel.app/",
     className: "clim",
-    src: "climaserv.png",
+    src: clim,
     alt: "image page d'accueil du site clim a serv",
     nom: "Clim @ Serv'",
     description:
@@ -62,7 +64,7 @@ function App() {
               </h1>
             </div>
             <div className="photo">
-              <img src="moi.jpeg" />
+              <img src={moi} />
             </div>
           </div>
           <div className="ligne2">
