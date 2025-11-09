@@ -78,7 +78,8 @@ body {
   animation: redresser 0.5s ease-in-out forwards;
 
   .header {
-    flex: 1;
+    height: 10vh;
+    width: 97vw;
     background-color: #dae3d7;
     display: flex;
     justify-content: center;
@@ -87,12 +88,15 @@ body {
     overflow: hidden;
     font-size: 1.7rem;
     color: #1f2a24;
+    margin: 0 auto;
   }
 
   .main {
-    flex: 8;
+    height: 90vh;
+    width: 97vw;
     display: flex;
     gap: 1rem;
+    margin: 0 auto;
 
     .gauche {
       flex: 2;
