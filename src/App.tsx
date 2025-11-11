@@ -6,7 +6,7 @@ import github from "./assets/png-transparent-github-social-media-computer-icons-
 import moi from "./assets/moi.jpeg";
 import clim from "./assets/climaserv.png";
 
-const taff = [
+const emploi = [
   {
     key: "1",
     href: "https://laclim.vercel.app/",
@@ -16,6 +16,9 @@ const taff = [
     nom: "Clim @ Serv'",
     description:
       "Site internet pour une entreprise de climatisation et pompe à chaleur",
+    outil1: "Next Js",
+    outil2: "",
+    outil3: "",
   },
 ];
 
@@ -77,13 +80,12 @@ function App() {
               <h2>Contactez-moi</h2>
             </div>
             <div className="description">
-              <button>
-                <FiArrowUpRight />
-              </button>
               <p>
-                Développeur web avec une passion grandissante pour le front-end
-                et une envie constante d'apprendre.
-                <br /> Chaque projet est une nouvelle mission.
+                Développeur web junior et une envie constante d'apprendre.
+                <br /> Pour moi, chaque projet est une nouvelle mission.
+                <br /> Je souhaite mettre en pratique les savoirs acquis pendant
+                ma formation et me perfectionner au sein d'une entreprise ayant
+                pour ambition de développer ses services en ligne.
               </p>
             </div>
           </div>
@@ -97,7 +99,7 @@ function App() {
                     <div className="overlay" />
                     <div className="contenu">
                       <h1> Projets</h1>
-                      {taff.map((i) => (
+                      {emploi.map((i) => (
                         <div className="projet">
                           <a
                             key={i.key}
@@ -115,6 +117,9 @@ function App() {
                           <div key={i.key}>
                             <h4>{i.nom}</h4>
                             <p>{i.description}</p>
+                            <ul>{i.outil1}</ul>
+                            <ul>{i.outil2}</ul>
+                            <ul>{i.outil3}</ul>
                           </div>
                         </div>
                       ))}
