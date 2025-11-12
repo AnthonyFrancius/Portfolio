@@ -5,6 +5,8 @@ import linkedin from "./assets/linkedin-logo-linkedin-icon-transparent-free-png.
 import github from "./assets/png-transparent-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-banner-thumbnail.png";
 import moi from "./assets/moi.jpeg";
 import clim from "./assets/climaserv.png";
+import oclock from "./assets/Oclock.png";
+import standre from "./assets/standre.png";
 
 const emploi = [
   {
@@ -81,7 +83,7 @@ function App() {
             </div>
             <div className="description">
               <p>
-                Développeur web junior et une envie constante d'apprendre.
+                Développeur web junior avec une envie constante d'apprendre.
                 <br /> Pour moi, chaque projet est une nouvelle mission.
                 <br /> Je souhaite mettre en pratique les savoirs acquis pendant
                 ma formation et me perfectionner au sein d'une entreprise ayant
@@ -98,7 +100,9 @@ function App() {
                   <div className="modal">
                     <div className="overlay" />
                     <div className="contenu">
-                      <h1> Projets</h1>
+                      <div className="titre">
+                        <h1> Projets</h1>
+                      </div>
                       {emploi.map((i) => (
                         <div className="projet">
                           <a
@@ -137,23 +141,42 @@ function App() {
                   <div className="modal">
                     <div className="overlay" />
                     <div className="contenu">
-                      <h1>Diplômes</h1>
-                      <h3>O'Clock</h3>
-                      <h4>2024</h4>
-                      <p>Développeur web fullstack</p>
-                      <p>En distanciel</p>
-                      <p />
-                      <h3>Lycée St André</h3>
-                      <h4>2010</h4>
-                      <p>Baccalauréal Négosiation et suivi de la clientèle</p>
-                      <p>Niort</p>
-                      <p />
-                      <h3>Lycée St André</h3>
-                      <h4>2008</h4>
-                      <p>Brevet d'Etudes Professionnel comptabilité</p>
-                      <p>Niort</p>
-                      <p />
-                      <p />
+                      <div className="titre">
+                        <h1>Diplômes</h1>
+                      </div>
+                      <div className="dip">
+                        <div className="card">
+                          <img src={oclock} alt="logo de l'école O'oclock" />
+                          <h3 className="lieu">O'Clock</h3>
+                          <h4 className="annee">2024</h4>
+                          <p className="etude">Développeur web fullstack</p>
+                          <p className="ou">En distanciel</p>
+                        </div>
+                        <div className="card">
+                          <img
+                            src={standre}
+                            alt="logo de l'école Saint André niort"
+                          />
+                          <h3 className="lieu">Lycée St André</h3>
+                          <h4 className="annee">2010</h4>
+                          <p className="etude">
+                            Baccalauréal Négosiation et suivi de la clientèle
+                          </p>
+                          <p className="ou">Niort</p>
+                        </div>
+                        <div className="card">
+                          <img
+                            src={standre}
+                            alt="logo de l'école Saint André niort"
+                          />
+                          <h3 className="lieu">Lycée St André</h3>
+                          <h4 className="annee">2008</h4>
+                          <p className="etude">
+                            Brevet d'Etudes Professionnel comptabilité
+                          </p>
+                          <p className="ou">Niort</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -168,7 +191,10 @@ function App() {
                   <div className="modal">
                     <div className="overlay" />
                     <div className="contenu">
-                      <h1> Savoir faire</h1>
+                      <div className="titre">
+                        <h1> Savoir faire</h1>
+                      </div>
+
                       <h3>Font-End</h3>
                       <p />
                       <p>React.js</p>
@@ -208,8 +234,9 @@ function App() {
                   <div className="modal">
                     <div className="overlay" />
                     <div className="contenu">
-                      <h1>Savoir être</h1>
-                      <p />
+                      <div className="titre">
+                        <h1>Savoir être</h1>
+                      </div>
                       <p>Motivé</p>
                       <p>Organisé</p>
                       <p>Autonome</p>

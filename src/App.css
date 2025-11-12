@@ -34,7 +34,6 @@ body {
   }
   .anim span {
     position: relative;
-    font-size: 7em;
     text-align: center;
     color: #dae3d7;
   }
@@ -52,14 +51,17 @@ body {
   21%,
   40% {
     content: "Anthony Francius";
+    font-size: 10vw;
   }
   45%,
   65% {
     content: "Développeur Web";
+    font-size: 10vw;
   }
   70%,
   90% {
     content: "Niort";
+    font-size: 10vw;
   }
   91%,
   100% {
@@ -342,39 +344,66 @@ body {
           }
           .contenu {
             display: flex;
-            height: 80vh;
-            width: 80vw;
+            height: 90vh;
+            width: 90vw;
             flex-direction: column;
             align-items: center;
             text-align: center;
             position: fixed;
-            top: 10%;
-            left: 10%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             overflow-y: scroll;
-            background-color: #1f2a24;
+            background-color: #5b7768;
             color: #dae3d7;
             scrollbar-width: none;
             border-radius: 15px;
 
-            h1 {
-              margin-top: 1em;
-              margin-bottom: 1em;
-              height: 0em;
-              font-size: 3rem;
+            .titre {
+              width: 95%;
+              height: 20vh;
+              background-color: #1f2a24;
+              margin-top: 2rem;
+              display: flex;
+              text-align: center;
+              justify-content: center;
+              align-items: center;
+              border-radius: 15px;
+
+              h1 {
+                color: #dae3d7;
+                font-size: 3.5rem;
+              }
             }
-            h3 {
-              margin-top: 1.5rem;
-              margin-bottom: 1rem;
-              height: 0em;
-              font-size: 2rem;
-            }
-            h4 {
-              height: 0;
-              font-size: 1.5rem;
-            }
-            p {
-              height: 0;
-              font-size: 1rem;
+
+            .dip {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+
+              .card {
+                width: 23vw;
+                height: 80vh;
+                background-color: #dae3d7;
+                margin: 2rem;
+                border-radius: 15px;
+
+                img {
+                  width: 1.7em;
+                }
+                .lieu {
+                  color: #1f2a24;
+                }
+                .annee {
+                  color: #5b7768;
+                }
+                .etude {
+                  color: #1f2a24;
+                }
+                .ou {
+                  color: #5b7768;
+                }
+              }
             }
           }
         }
