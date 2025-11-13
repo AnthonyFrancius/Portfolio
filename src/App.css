@@ -375,7 +375,55 @@ body {
                 font-size: 3.5rem;
               }
             }
-
+            .projet {
+              padding-top: 1em;
+              .mini {
+                display: flex;
+                justify-content: center;
+                width: 20vw;
+                height: 30vh;
+                a {
+                  img {
+                    width: auto;
+                    height: 100%;
+                  }
+                }
+              }
+              .desc {
+                display: flex;
+                flex-direction: column;
+                width: 65vw;
+                height: 30vh;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-top: 1.5rem;
+                h4 {
+                  margin: 0;
+                  text-align: start;
+                  font-size: 2rem;
+                  color: #1f2a24;
+                }
+                p {
+                  padding: 1rem 0 1rem 0;
+                  margin: 0;
+                  font-size: 1.5rem;
+                  color: #dae3d7;
+                }
+                .outil {
+                  display: flex;
+                  flex-direction: row;
+                  gap: 1rem;
+                  ul {
+                    margin: 0;
+                    font-size: 1.3rem;
+                    background-color: #1f2a24;
+                    color: #dae3d7;
+                    border-radius: 50px;
+                    padding: 0.75rem;
+                  }
+                }
+              }
+            }
             .dip {
               display: flex;
               flex-direction: row;
@@ -383,25 +431,106 @@ body {
 
               .card {
                 width: 23vw;
-                height: 80vh;
+                height: 55vh;
                 background-color: #dae3d7;
                 margin: 2rem;
                 border-radius: 15px;
 
-                img {
-                  width: 1.7em;
-                }
                 .lieu {
                   color: #1f2a24;
+                  font-size: 1.1em;
                 }
                 .annee {
                   color: #5b7768;
+                  font-size: 1.2rem;
+                  margin-top: 1rem;
                 }
                 .etude {
                   color: #1f2a24;
+                  font-size: 1.4rem;
                 }
                 .ou {
                   color: #5b7768;
+                  font-size: 1.2rem;
+                  position: relative;
+                  text-align: start;
+                  top: 2rem;
+                  margin-left: 2rem;
+                }
+              }
+            }
+            .faire {
+              width: 100%;
+              height: auto;
+              display: flex;
+              flex-direction: row;
+              text-align: center;
+              align-items: center;
+              padding: 0.5em;
+              gap: 1em;
+              padding-left: 1em;
+              padding-right: 1em;
+
+              .card {
+                width: 20vw;
+                height: 60vh;
+                padding: 1rem;
+                border-radius: 15px;
+                background-color: #dae3d7;
+                .index {
+                  height: 44vh;
+                  background-color: #1f2a24;
+                  padding-top: 1rem;
+                  border-radius: 15px;
+                  padding-top: 0.2rem;
+                  p {
+                    font-size: 1.5rem;
+                    color: #dae3d7;
+                  }
+                }
+                h3 {
+                  text-align: start;
+                  padding-top: 1rem;
+                  padding-left: 0.5rem;
+                  font-size: 1.2rem;
+                  color: #1f2a24;
+                }
+              }
+            }
+            .etre {
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              align-items: center;
+              width: 80vw;
+
+              .tableau {
+                margin: 1rem;
+                background-color: #dae3d7;
+                border-radius: 15px;
+                width: 75vw;
+                height: 35vh;
+                .adj {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                  height: 3.2em;
+                  margin: 1rem;
+                  background-color: #5b7768;
+                  border-radius: 15px;
+                  color: #dae3d7;
+
+                  p {
+                    font-size: 2rem;
+                    margin: 0 auto;
+                  }
+                }
+                h4 {
+                  font-size: 1.8rem;
+                  padding: 0 0 0 2rem;
+                  text-align: start;
+                  color: #1f2a24;
                 }
               }
             }

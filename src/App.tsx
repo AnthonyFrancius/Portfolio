@@ -5,8 +5,6 @@ import linkedin from "./assets/linkedin-logo-linkedin-icon-transparent-free-png.
 import github from "./assets/png-transparent-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-banner-thumbnail.png";
 import moi from "./assets/moi.jpeg";
 import clim from "./assets/climaserv.png";
-import oclock from "./assets/Oclock.png";
-import standre from "./assets/standre.png";
 
 const emploi = [
   {
@@ -105,25 +103,28 @@ function App() {
                       </div>
                       {emploi.map((i) => (
                         <div className="projet">
-                          <a
-                            key={i.key}
-                            href={i.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <img
-                              className={i.className}
-                              src={i.src}
-                              alt={i.alt}
-                            />
-                          </a>
-
-                          <div key={i.key}>
+                          <div className="mini">
+                            <a
+                              key={i.key}
+                              href={i.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <img
+                                className={i.className}
+                                src={i.src}
+                                alt={i.alt}
+                              />
+                            </a>
+                          </div>
+                          <div key={i.key} className="desc">
                             <h4>{i.nom}</h4>
                             <p>{i.description}</p>
-                            <ul>{i.outil1}</ul>
-                            <ul>{i.outil2}</ul>
-                            <ul>{i.outil3}</ul>
+                            <div className="outil">
+                              {i.outil1 && <ul>{i.outil1}</ul>}
+                              {i.outil2 && <ul>{i.outil2}</ul>}
+                              {i.outil3 && <ul>{i.outil3}</ul>}
+                            </div>
                           </div>
                         </div>
                       ))}
@@ -146,17 +147,15 @@ function App() {
                       </div>
                       <div className="dip">
                         <div className="card">
-                          <img src={oclock} alt="logo de l'école O'oclock" />
                           <h3 className="lieu">O'Clock</h3>
                           <h4 className="annee">2024</h4>
-                          <p className="etude">Développeur web fullstack</p>
-                          <p className="ou">En distanciel</p>
+                          <p className="etude">Développeur Web et Web Mobile</p>
+                          <p className="ou">
+                            <br />
+                            En distanciel
+                          </p>
                         </div>
                         <div className="card">
-                          <img
-                            src={standre}
-                            alt="logo de l'école Saint André niort"
-                          />
                           <h3 className="lieu">Lycée St André</h3>
                           <h4 className="annee">2010</h4>
                           <p className="etude">
@@ -165,10 +164,6 @@ function App() {
                           <p className="ou">Niort</p>
                         </div>
                         <div className="card">
-                          <img
-                            src={standre}
-                            alt="logo de l'école Saint André niort"
-                          />
                           <h3 className="lieu">Lycée St André</h3>
                           <h4 className="annee">2008</h4>
                           <p className="etude">
@@ -194,31 +189,43 @@ function App() {
                       <div className="titre">
                         <h1> Savoir faire</h1>
                       </div>
-
-                      <h3>Font-End</h3>
-                      <p />
-                      <p>React.js</p>
-                      <p>Next.js</p>
-                      <p>JavaScript</p>
-                      <p>TypeScript</p>
-                      <p>Vite</p>
-                      <h3>Back-End</h3>
-                      <p />
-                      <p>Node js</p>
-                      <p>Firebase</p>
-                      <p>PosgreSQL</p>
-                      <h3>Design et céation visuel</h3>
-                      <p />
-                      <p>Figma</p>
-                      <p>Photoroom</p>
-                      <p>Canva</p>
-                      <p>Blender</p>
-                      <h3>Autres</h3>
-                      <p />
-                      <p>Git/Github</p>
-                      <p>Vercel</p>
-                      <p>Vs Code</p>
-                      <p />
+                      <div className="faire">
+                        <div className="card">
+                          <div className="index">
+                            <p>React.js</p>
+                            <p>Next.js</p>
+                            <p>JavaScript</p>
+                            <p>TypeScript</p>
+                            <p>Vite</p>
+                          </div>
+                          <h3>Font-End</h3>
+                        </div>
+                        <div className="card">
+                          <div className="index">
+                            <p>Node js</p>
+                            <p>Firebase</p>
+                            <p>PosgreSQL</p>
+                          </div>
+                          <h3>Back-End</h3>
+                        </div>
+                        <div className="card">
+                          <div className="index">
+                            <p>Figma</p>
+                            <p>Photoroom</p>
+                            <p>Canva</p>
+                            <p>Blender</p>
+                          </div>
+                          <h3>Design et céation visuel</h3>
+                        </div>
+                        <div className="card">
+                          <div className="index">
+                            <p>Git / Github</p>
+                            <p>Vercel</p>
+                            <p>Visual Studio Code</p>
+                          </div>
+                          <h3>Autres</h3>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -237,12 +244,26 @@ function App() {
                       <div className="titre">
                         <h1>Savoir être</h1>
                       </div>
-                      <p>Motivé</p>
-                      <p>Organisé</p>
-                      <p>Autonome</p>
-                      <p>Coopératif</p>
-                      <p />
-                      <p />
+                      <div className="etre">
+                        <div className="tableau">
+                          <div className="adj">
+                            <p>Motivé</p>
+                            <p>Attentionné</p>
+                            <p>Assertif</p>
+                            <p>Coopératif</p>
+                          </div>
+                          <h4>Collectif</h4>
+                        </div>
+                        <div className="tableau">
+                          <div className="adj">
+                            <p>Autonome</p>
+                            <p>Organisé</p>
+                            <p>Curieux</p>
+                            <p>Patient</p>
+                          </div>
+                          <h4>Individuel</h4>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
