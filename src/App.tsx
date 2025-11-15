@@ -56,6 +56,13 @@ function App() {
     </div>
   ) : (
     <div className="App">
+      <div className="portable">
+        <h3>
+          le format mobile <br />
+          n'est pas disponible <br />
+          pour le moment.
+        </h3>
+      </div>
       <header className="header">Anthony Francius</header>
       <main className="main">
         <div className="gauche">
@@ -150,16 +157,14 @@ function App() {
                           <h3 className="lieu">O'Clock</h3>
                           <h4 className="annee">2024</h4>
                           <p className="etude">Développeur Web et Web Mobile</p>
-                          <p className="ou">
-                            <br />
-                            En distanciel
-                          </p>
+                          <p className="ou">En distanciel</p>
                         </div>
                         <div className="card">
                           <h3 className="lieu">Lycée St André</h3>
                           <h4 className="annee">2010</h4>
                           <p className="etude">
-                            Baccalauréal Négosiation et suivi de la clientèle
+                            Baccalauréal Négociation <br /> et suivi de la
+                            clientèle
                           </p>
                           <p className="ou">Niort</p>
                         </div>
