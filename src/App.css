@@ -387,10 +387,15 @@ body {
                 width: 20vw;
                 height: 30vh;
                 a {
+                  padding: 0.5em;
                   img {
                     width: auto;
                     height: 100%;
                   }
+                }
+                a:hover {
+                  transition: 0.5s;
+                  scale: 1.2;
                 }
               }
               .desc {
@@ -401,6 +406,7 @@ body {
                 justify-content: flex-start;
                 align-items: flex-start;
                 margin-top: 1.5rem;
+                padding-left: 2rem;
                 h4 {
                   margin: 0;
                   text-align: start;
@@ -512,6 +518,7 @@ body {
               text-align: center;
               align-items: center;
               width: 80vw;
+              padding-bottom: 1rem;
 
               .tableau {
                 margin: 1rem;
@@ -519,6 +526,7 @@ body {
                 border-radius: 15px;
                 width: 75vw;
                 height: auto;
+
                 .adj {
                   display: flex;
                   flex-direction: row;
@@ -571,7 +579,7 @@ body {
 }
 @media (max-width: 1100px) {
   .App {
-    overflow: auto;
+    overflow-y: auto;
   }
   @media (max-width: 500px) {
     .App {
