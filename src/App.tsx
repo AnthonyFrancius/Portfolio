@@ -5,6 +5,7 @@ import linkedin from "./assets/linkedin-logo-linkedin-icon-transparent-free-png.
 import github from "./assets/png-transparent-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-banner-thumbnail.png";
 import moi from "./assets/moi.jpeg";
 import clim from "./assets/climaserv.png";
+import portfolio from "./assets/portfolio.png";
 
 const emploi = [
   {
@@ -17,7 +18,19 @@ const emploi = [
     description:
       "Site internet pour une entreprise de climatisation et pompe à chaleur",
     outil1: "Next Js",
-    outil2: "",
+    outil2: "Vite",
+    outil3: "Vercel",
+  },
+  {
+    key: "2",
+    href: "https://anthonyfrancius.github.io/Portfolio/",
+    className: "Portfolio d'Anthony Francius",
+    src: portfolio,
+    alt: "image page d'accueil portfolio en ligne",
+    nom: "Anthony Francius",
+    description: "portfolio en ligne ",
+    outil1: "React Js",
+    outil2: "Vite",
     outil3: "",
   },
 ];
@@ -75,6 +88,7 @@ function App() {
             </div>
             <div className="photo">
               <img src={moi} />
+              <span>36 ans</span>
             </div>
           </div>
           <div className="ligne2">
