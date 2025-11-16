@@ -186,7 +186,7 @@ function App() {
                           <h3 className="lieu">Lycée St André</h3>
                           <h4 className="annee">2008</h4>
                           <p className="etude">
-                            Brevet d'Etudes Professionnel comptabilité
+                            Brevet d'Etudes Professionnelles comptabilité
                           </p>
                           <p className="ou">Niort</p>
                         </div>
